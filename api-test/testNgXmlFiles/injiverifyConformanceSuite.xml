@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Inji-Verify OpenID Conformance">
+	<listeners>
+		<listener class-name="io.mosip.testrig.apirig.report.EmailableReport" />
+	</listeners>
+	<test name="OpenIDConformance">
+		<classes>
+			<class name="io.inji.testrig.apirig.injiverify.testscripts.OpenIDConformanceTest" />
+		</classes>
+	</test>
+</suite>

@@ -34,7 +34,7 @@ COPY entrypoint.sh $work_dir
 
 # install packages and create user
 RUN apt-get -y update \
-&& apt-get install -y unzip jq curl \
+&& apt-get install -y unzip jq curl python3 python3-httpx python3-pil \
 && groupadd -g ${container_user_gid} ${container_user_group} \
 && useradd -u ${container_user_uid} -g ${container_user_group} -s /bin/bash -m ${container_user} \
 && curl -LO "https://storage.googleapis.com/kubernetes-release/release/v${KUBECTL_VERSION}/bin/linux/amd64/kubectl" \
